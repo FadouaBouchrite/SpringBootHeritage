@@ -11,8 +11,7 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "Type",length = 4)
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class Personne {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
@@ -20,5 +19,6 @@ public abstract class Personne {
   private String nom;
   @Temporal(TemporalType.DATE)
   private Date dateNaissance;
+
 
 }

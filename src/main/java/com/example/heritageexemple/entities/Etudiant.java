@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@DiscriminatorValue("etud")
+
 public class Etudiant extends Personne{
 
     private Double note;
