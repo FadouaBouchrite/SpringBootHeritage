@@ -13,8 +13,9 @@ import java.util.Date;
 @AllArgsConstructor
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class Personne {
+    //il faut pas mettre .IDENTITY
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.TABLE)
     private Long id;
   private String nom;
   @Temporal(TemporalType.DATE)
